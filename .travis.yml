@@ -3,6 +3,13 @@ language: java
 jdk:
   - oraclejdk8
 
+env:
+  global:
+    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+    # via the "travis encrypt" command using the project repo's public key
+    # encypted for db/$project
+    - secure: "B+xVL6D6Ufp6fuWqYjFX0RjmnHp/EK6+Dowft3F8VL5jHyHtVoijH0PkY2jXzBkIntUNmWYm09kn/iBVfOFiQ1LFiU+FnsCEueBwP96peWPDLiN/6BosxoPxFyu2jbJs7XzJhW0JBu9Jq8U5JJ1oIJdKnUldZ0HcYIXgng61+u6k31DYPMVWeQBC9sd1M+ooyu6Wxrhk+nl8ZXMYtqSnxGqws+JVilG6n6QXTZjCJHPDI2CY2i4zHOV/q6Ggt4WRwqjT9CAvP898zlbinoowSA49wLcpTgQamzf81g+05eLTk3G1AlyLqKvPlDXUO4PEA73m24tF4m4x+75JerHTDxrJLcDRemVIYkoyKGKjThAehYwhp2kjMmDnjF1s77VXZG319/IWo+GJbi67MKsuqXDGEB44n2spnJvR5bDpU+00k/NhVeGfXGanJj3dd1Q7+w8Svq6HcI2DeYolzW6uc6s1z3XkoiN4X4kgNcFlsdBzGTrU83jANKswgbs+9/khJxXBf/Fto/Ys/2p2hKgpD5RqGYjvf75tJBFgQkljoNOwvyTO5QjFXFhtXGNk+jg+jXyZky5qG9eGZu5hmBLW1hAhG3fvTfshtmFmXxctIEq1gQM4BMw3X5m8jXg6ou2tvknylz8TSP/9AByU+pVYv6i8u4WMLDC6d18lH3Y0Xic="
+
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
